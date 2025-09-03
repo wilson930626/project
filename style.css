@@ -1,0 +1,476 @@
+/* ========== style.css ========== */
+/* 全站通用設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  background-color: #f4f6fc;
+  color: #333;
+}
+
+/* 導覽列 */
+ .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #7e87dd;
+      color: white;
+      padding: 14px 28px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+ }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      font-size: 16px;
+      align-items: center;
+    }
+
+    .nav-links li {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .nav-links li:hover {
+      color: #e0f7fa;
+      text-decoration: underline;
+    }
+
+    .navbar-icons img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: opacity 0.3s; 
+    }
+
+    .navbar-icons img:hover {
+      opacity: 0.75;
+    }
+
+/* 主內容容器 */
+ .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 幻燈片區 */
+    .swiper {
+      width: 100%;
+      height: 700px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 主內容區塊 */
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin: 30px 20px;
+      gap: 20px;
+    }
+
+    .block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 30px 20px;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .block:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .block img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .block p {
+      font-size: 16px;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* 色塊背景 */
+    .sky {
+      background-color: #d0f4f7;
+    }
+
+    .peach {
+      background-color: #ffe0cc;
+    }
+
+    .mint {
+      background-color: #dcf5e4;
+    }
+
+    .lavender {
+      background-color: #ece5f0;
+    }
+	
+/* 標題 */
+ .title {
+      font-size: 32px;
+      color: #34495e;
+      margin-bottom: 36px;
+      background-color: #e6edfa;
+      display: inline-block;
+      padding: 14px 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+/* 卡片通用 */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* 表單 */
+form label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* 按鈕 */
+button, .btn {
+  background-color: #7e87dd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #5f66b8;
+}
+
+/* Grid 排版（器材、健身菜單） */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .card {
+      background: #f9fbff;
+      border-radius: 16px;
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      width: 220px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+      background: #edf3ff;
+    }
+    .card img {
+  
+    width: 120px;      /* 圖片寬度 */
+    height: 120px;     /* 圖片高度 */
+    object-fit: contain; /* 保持比例，不變形 */
+    margin-bottom: 12px; /* 與文字距離 */
+  }
+    .card span {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .card .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 4px;
+      color: #666;
+    }
+
+    .card1 {
+      background: #f9fbff;
+      border-radius: 16px;
+      padding: 28px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      width: 220px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+
+    .card1 img {
+  
+    width: 120px;      /* 圖片寬度 */
+    height: 120px;     /* 圖片高度 */
+    object-fit: contain; /* 保持比例，不變形 */
+    margin-bottom: 12px; /* 與文字距離 */
+  }
+    .card1 span {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .card1 .subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 4px;
+      color: #666;
+    }
+/*home1*/
+	 h2 {
+      margin-top: 30px;
+      color: #2c3e50;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f4fc;
+    }
+	
+/*營養攝取建議*/
+.summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .summary-box {
+      display: flex;
+      align-items: center;
+      background-color: #e8ebf9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .summary-box img {
+      width: 40px;
+      margin-right: 12px;
+    }
+
+    .summary-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    .summary-content input {
+      width: 120px;
+      padding: 6px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .input-section {
+      background-color: #dfffdc;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: 100px 1fr 60px 80px;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .input-row label {
+      font-size: 18px;
+      background-color: #6bc48c;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .input-row input {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    .unit {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .add-btn {
+      background-color: #6bc48c;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .add-btn:hover {
+      background-color: #57aa74;
+    }
+/*AI*/
+.input-box {
+      width: 60%;
+      background-color: #d9d9d9;
+      padding: 14px 18px;
+      font-size: 20px;
+      border: 2px solid #a264e3;
+      border-radius: 6px;
+      margin: 0 auto;
+      color: #000;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 600px) {
+      .input-box {
+        width: 100%;
+      }
+
+     
+    }
+	
+/* account_view*/
+.account-section {
+  background-color: #ebebeb;
+  padding: 20px 28px;
+  border-radius: 12px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.account-subtitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.account-section p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.account-btn-right {
+  text-align: right;
+  margin-top: 12px;
+}
+
+.account-btn {
+  background-color: #6f78d5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.account-btn:hover {
+  background-color: #5b64b0;
+}
+
+
+
+/* 防止圖片造成橫向留白 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 防止任何內容超出畫面 */
+body {
+  overflow-x: hidden;
+}
+
+/* swiper 修正 */
+.swiper {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
